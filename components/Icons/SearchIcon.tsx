@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function SearchIcon({ className }: { className?: string }) {
+const SearchIcon = ({ className }: { className?: string }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,4 +16,6 @@ export default function SearchIcon({ className }: { className?: string }) {
       />
     </svg>
   );
-}
+};
+
+export default SearchIcon;

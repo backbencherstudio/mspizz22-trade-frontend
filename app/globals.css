@@ -125,3 +125,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.activeBtn {
+  color: #006E99;
+}
+
+.inputStyle {
+    @apply border border-[#767676] focus:outline-0 focus:border-[#006E99]
+}
