@@ -3,3 +3,12 @@
 .max-container {
   @apply py-6 px-4 xl:py-9 xl:px-[176px] max-w-[1920px] w-full mx-auto;
 }
+
+
+.activeBtn {
+  color: #006E99;
+}
+
+.inputStyle {
+    @apply border border-[#767676] focus:outline-0 focus:border-[#006E99]
+}
