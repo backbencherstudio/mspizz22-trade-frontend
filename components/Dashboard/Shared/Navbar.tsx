@@ -25,9 +25,9 @@ export default function Navbar() {
   ];
 
   const rightSideActions = [
-    { label: "Messages", icon: <MessageIcon />, href: "#" },
-    { label: "Support", icon: <SupportIcon />, href: "#" },
-    { label: "Profile", icon: <ProfileIcon />, href: "#" },
+    { label: "Messages", icon: <MessageIcon className="size-4 2xl:size-6" />, href: "#" },
+    { label: "Support", icon: <SupportIcon className="size-4 2xl:size-6"  />, href: "#" },
+    { label: "Profile", icon: <ProfileIcon className="size-4 2xl:size-6"  />, href: "#" },
   ]
 
   console.log("Active Tab:", activeTab);
@@ -35,15 +35,15 @@ export default function Navbar() {
   return (
     <div className="sticky top-0 ">
       {/* Main Navigation Bar */}
-      <div className=" px-4 lg:px-6 flex gap-8 items-center h-[74px]">
+      <div className=" px-4 2xl:px-6 flex 2xl:gap-8 xl:gap-6 gap-4 items-center h-[74px]">
         {/* Logo */}
-        <div className="flex items-center h-full">
+        <div className="flex items-center min-w-[74px]">
           <img src="/logo_default.svg" alt="" className=" " />
         </div>
 
-        <div className="flex-1 flex items-center justify-between border-b border-[#CDCECE] h-full  ">
+        <div className="flex-1 flex items-center justify-between lg:border-b border-[#CDCECE] h-full  ">
           {/* Desktop Navigation - Main Items */}
-          <div className="hidden lg:flex items-center space-x-6 h-full">
+          <div className="hidden lg:flex items-center 2xl:gap-6 gap-2 xl:gap-4 h-full">
             {navItems.map((item, index) => {
               const isObject = typeof item === 'object';
               const itemLabel = isObject ? item.label : item;
@@ -53,7 +53,7 @@ export default function Navbar() {
                 <button
                   key={index}
                   onClick={() => setActiveTab(itemLabel)}
-                  className={`cursor-pointer  h-full text-[#596772] hover:text-[#006E99] xl:text-lg text-base font-medium tracking-[-.09px] transition-colors duration-200 ${activeTab === itemLabel
+                  className={`cursor-pointer  h-full text-[#596772] hover:text-[#006E99] 2xl:text-lg lg:text-sm text-base font-medium tracking-[-.09px] transition-colors duration-200 ${activeTab === itemLabel
                     ? "border-b-[3px] -mb-[3px] border-[#006E99] activeBtn transition-all duration-300 ease-in-out "
                     : "  "
                     }`}
@@ -65,21 +65,21 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Right Side Actions */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center 2xl:gap-6 gap-2 xl:gap-4">
             {/* Search */}
             <div className='relative'>
-              <input className="inputStyle w-[225px] h-[36px] rounded-md transition-colors pl-[38px]" placeholder="Search" />
+              <input className="inputStyle 2xl:w-[225px] lg:w-[140px] xl:w-[200px] 2xl:h-[36px] h-[30px] rounded-md transition-colors pl-[38px]" placeholder="Search" />
               <SearchIcon className="absolute top-1/2 w-[18px] h-[18px] left-[8px] transform -translate-y-1/2 cursor-pointer" />
             </div>
 
             {rightSideActions.map((action, index) => (
               <Link href={action?.href} key={index} className={`flex gap-1.5 items-center text-[#596772]  leading-[-0.18px] `}>
                 <span className="">{action.icon}</span>
-                <span className="xl:text-lg text-base font-normal text-[#596772] hover:text-[#006E99]">{action.label}</span>
+                <span className="2xl:text-lg lg:text-sm text-base font-normal text-[#596772] hover:text-[#006E99]">{action.label}</span>
               </Link>
             ))}
             {/* Log Out */}
-            <button className="xl:text-lg text-base font-normal text-[#596772] hover:text-[#006E99] cursor-pointer">
+            <button className="2xl:text-lg lg:text-sm text-base font-normal text-[#596772] hover:text-[#006E99] cursor-pointer">
               Log Out
             </button>
           </div>
