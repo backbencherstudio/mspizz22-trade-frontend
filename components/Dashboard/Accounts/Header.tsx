@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Download from "@/components/Icons/Download";
 import Print from "@/components/Icons/Print";
 import QuestionCircle from "@/components/Icons/QuestionCircle";
@@ -14,6 +15,31 @@ import {
 } from "@/components/ui/select";
 
 export default function Header() {
+  const [currentTime, setCurrentTime] = useState<string>("");
+
+  // Real-time
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true,
+      });
+      const dateString = now.toLocaleDateString("en-US", {
+        month: "2-digit",
+        day: "2-digit",
+        year: "numeric",
+      });
+      setCurrentTime(`${timeString} ET, ${dateString}`);
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       {/* Title */}
@@ -22,9 +48,7 @@ export default function Header() {
           Realized Gain / Loss
         </h1>
         <div className="flex flex-wrap items-center gap-y-2 gap-x-6 md:gap-x-4 lg:gap-x-6">
-          <p className="text-sm text-secondary-text">
-            Updated: 03:18:11 PM ET, 09/17/2025
-          </p>
+          <p className="text-sm text-secondary-text">Updated: {currentTime}</p>
           <div className="flex gap-y-2 gap-x-2 sm:gap-x-4 md:gap-x-2 lg:gap-x-4">
             <button className="cursor-pointer hover:bg-gray-200 rounded-full p-2">
               <Refresh className="h-5 w-5" />
@@ -46,7 +70,7 @@ export default function Header() {
       <div className="flex justify-between items-center flex-wrap gap-y-2 sm:gap-x-4 gap-x-2 pt-6 sm:pt-8">
         <Select>
           <SelectTrigger
-            className="max-w-[250px] w-full text-base font-semibold bg-link rounded-[6px] shadow-none outline-none focus-visible:ring-0 focus-visible:ring-offset-0 cursor-pointer [&_span]:text-white [&_svg]:text-white"
+            className="max-w-[250px] w-full text-base font-semibold bg-link rounded-[6px] shadow-none outline-none focus-visible:ring-0 focus-visible:ring-offset-0 cursor-pointer [&_span]:text-white [&_svg]:!text-white"
             style={{ height: "50px" }}
           >
             <SelectValue

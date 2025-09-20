@@ -1,6 +1,8 @@
-import Header from "@/components/Dashboard/Home/Header";
-import TransactionFilter from "@/components/Dashboard/Home/TransactionFilter";
-import Summary from "@/components/Dashboard/Home/Summary";
+import Header from "@/components/Dashboard/Accounts/Header";
+import TransactionFilter from "@/components/Dashboard/Accounts/TransactionFilter";
+import Summary from "@/components/Dashboard/Accounts/Summary";
+import DetailsCard from "@/components/Dashboard/Accounts/DetailsCard";
+import FixedTrade from "./FixedTrade";
 
 export default function Accounts() {
   return (
@@ -9,11 +11,10 @@ export default function Accounts() {
         <Header />
         <TransactionFilter />
         <Summary />
+        <DetailsCard />
       </div>
 
-      <div className="fixed bottom-0 left-0 h-10 w-full bg-green-500">
-        Bottom Fixed Part is here
-      </div>
+      <FixedTrade/>
     </div>
   );
 }

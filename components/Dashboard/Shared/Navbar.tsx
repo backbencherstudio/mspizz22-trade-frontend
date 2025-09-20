@@ -92,8 +92,12 @@ export default function Navbar() {
     router.push(link);
   };
 
+  useEffect(() => {
+    setActiveTab(pathname);
+  }, [pathname]);
+
   return (
-    <div className="sticky top-0">
+    <div className="sticky top-0 z-[9] bg-[#F6F6F6] border-b border-[#CDCECE] lg:border-b-0">
       {/* Main Navigation Bar */}
       <div className="px-4 2xl:px-6 flex 2xl:gap-8 xl:gap-6 gap-4 items-center h-[74px]">
         {/* Logo */}

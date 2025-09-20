@@ -9,7 +9,12 @@ import {
 } from "@/components/ui/tooltip";
 import { Cell, Pie, PieChart } from "recharts";
 
-const data = [
+interface Data {
+  name: string;
+  value: number;
+}
+
+const data: Data[] = [
   { name: "Gain", value: 700 },
   { name: "Loss", value: 300 },
 ];
@@ -36,8 +41,9 @@ export default function Summary() {
           </TabsList>
           <div className="py-[24px] sm:py-[36px] px-[26px] sm:px-[38px]">
             <TabsContent value="gain-loss-summary">
-              <div className="grid lg:grid-cols-[30%_30%_40%] gap-y-4 lg:gap-y-0">
-                <div className="lg:pr-[25px] lg:border-r lg:border-[#C6CCD3]">
+              <div className="grid lg:grid-cols-[28%_32%_40%] gap-y-4 lg:gap-y-0">
+                {/* Reporting Period */}
+                <div className="lg:pr-[15px] xl:pr-[25px] lg:border-r lg:border-[#C6CCD3]">
                   <p className="text-base">Reporting Period</p>
                   <h2 className="text-xl mb-4">01/01/2025 to 09/17/2025</h2>
 
@@ -58,18 +64,19 @@ export default function Summary() {
                   </div>
                 </div>
 
-                <div className="lg:px-[25px] lg:border-r lg:border-[#C6CCD3]">
+                {/* Gain/Loss */}
+                <div className="lg:px-[15px] xl:px-[25px] lg:border-r lg:border-[#C6CCD3]">
                   <div className="space-y-3 sm:space-y-0">
                     <h2 className="text-xl font-semibold mb-4">Gain/Loss</h2>
 
                     <div className="grid grid-cols-3 items-center justify-between gap-1">
-                      <p className="text-base  text-secondary-text">
-                        Long Term
-                      </p>
-                      <p className="text-base  font-medium text-[#C10C15] text-center">
+                      <p className="text-base text-secondary-text">Long Term</p>
+                      <p className="text-base font-medium text-[#C10C15] text-center">
                         -$3,033.91
                       </p>
-                      <p className="text-base  text-[#C10C15] text-right">(-4.06%)</p>
+                      <p className="text-base text-[#C10C15] text-right">
+                        (-4.06%)
+                      </p>
                     </div>
 
                     <div className="grid grid-cols-3 items-center justify-between gap-1">
@@ -79,7 +86,9 @@ export default function Summary() {
                       <p className="text-base  font-medium text-[#277326] text-center">
                         -$3,033.91
                       </p>
-                      <p className="text-base  text-[#277326] text-right">(-4.06%)</p>
+                      <p className="text-base  text-[#277326] text-right">
+                        (-4.06%)
+                      </p>
                     </div>
 
                     <div className="grid grid-cols-3 items-center justify-between gap-1">
@@ -87,7 +96,9 @@ export default function Summary() {
                       <p className="text-base  font-medium text-[#277326] text-center">
                         -$3,033.91
                       </p>
-                      <p className="text-base  text-[#277326] text-right">(-4.06%)</p>
+                      <p className="text-base  text-[#277326] text-right">
+                        (-4.06%)
+                      </p>
                     </div>
 
                     <div className="grid grid-cols-3 items-center justify-between gap-1">
@@ -102,7 +113,8 @@ export default function Summary() {
                   </div>
                 </div>
 
-                <div className="lg:pl-[25px]">
+                {/* Totals */}
+                <div className="lg:pl-[15px] xl:pl-[25px]">
                   <div className="grid sm:grid-cols-2 items-center">
                     <div className="space-y-3 sm:space-y-0">
                       <h2 className="text-xl font-semibold mb-4 flex items-center gap-1">
@@ -116,35 +128,35 @@ export default function Summary() {
                           </TooltipContent>
                         </Tooltip>
                       </h2>
-                      <div className="grid sm:grid-cols-2 items-center justify-between gap-1">
+                      <div className="grid grid-cols-2 items-center justify-between gap-1">
                         <p className="text-base  text-secondary-text">
                           Total Gains
                         </p>
-                        <p className="text-base  font-medium text-[#277326]">
+                        <p className="text-base text-right font-medium text-[#277326]">
                           -$3,033.91
                         </p>
                       </div>
-                      <div className="grid sm:grid-cols-2 items-center justify-between gap-1">
+                      <div className="grid grid-cols-2 items-center justify-between gap-1">
                         <p className="text-base  text-secondary-text">
                           Total Losses
                         </p>
-                        <p className="text-base  font-medium text-[#C10C15]">
+                        <p className="text-base text-right font-medium text-[#C10C15]">
                           -$3,033.91
                         </p>
                       </div>
-                      <div className="grid sm:grid-cols-2 items-center justify-between gap-1">
+                      <div className="grid grid-cols-2 items-center justify-between gap-1">
                         <p className="text-base  text-secondary-text">
                           Net Gain
                         </p>
-                        <p className="text-base  font-medium text-[#277326]">
+                        <p className="text-base text-right font-medium text-[#277326]">
                           -$3,033.91
                         </p>
                       </div>
                     </div>
-                    <div className="relative">
+                    <div className="relative w-fit mx-auto lg:mx-0">
                       <PieChart height={100} width={200}>
                         <Pie
-                          data={data}
+                          data={data as any}
                           cx={100}
                           cy={100}
                           startAngle={180}
@@ -164,8 +176,8 @@ export default function Summary() {
                         </Pie>
                       </PieChart>
 
-                      <div className="absolute -bottom-[20px] left-[20%]  text-center">
-                        <p className="text-sm">Gain/Loss Ratio</p>
+                      <div className="absolute -bottom-[20px] left-[50%] -translate-x-1/2 text-center">
+                        <p className="text-[12px]">Gain/Loss Ratio</p>
                         <h2 className="text-xl font-semibold">79.02%</h2>
                       </div>
                     </div>
