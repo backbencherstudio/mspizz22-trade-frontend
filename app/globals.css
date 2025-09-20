@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.max-container {
+  @apply py-6 px-4 xl:py-9 xl:px-[176px] max-w-[1920px] w-full mx-auto;
+}
