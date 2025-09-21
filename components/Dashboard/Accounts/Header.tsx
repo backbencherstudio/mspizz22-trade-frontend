@@ -44,7 +44,7 @@ export default function Header() {
     <>
       {/* Title */}
       <div className="flex flex-col md:flex-row justify-between md:items-center gap-y-2 gap-x-4">
-        <h1 className="text-3xl lg:text-[36px] tracking-[-0.9px]">
+        <h1 className="text-3xl lg:text-[32px] tracking-[-0.9px] leading-[100%] font-[300]">
           Realized Gain / Loss
         </h1>
         <div className="flex flex-wrap items-center gap-y-2 gap-x-6 md:gap-x-4 lg:gap-x-6">
@@ -70,7 +70,7 @@ export default function Header() {
       <div className="flex justify-between items-center flex-wrap gap-y-2 sm:gap-x-4 gap-x-2 pt-6 sm:pt-8">
         <Select>
           <SelectTrigger
-            className="max-w-[250px] w-full text-base font-semibold bg-link rounded-[6px] shadow-none outline-none focus-visible:ring-0 focus-visible:ring-offset-0 cursor-pointer [&_span]:text-white [&_svg]:!text-white"
+            className="max-w-[350px] w-full text-base font-semibold bg-link rounded-[6px] shadow-none outline-none focus-visible:ring-0 focus-visible:ring-offset-0 cursor-pointer [&_span]:text-white [&_svg]:!text-white"
             style={{ height: "50px" }}
           >
             <SelectValue
