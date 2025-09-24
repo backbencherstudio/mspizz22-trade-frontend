@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Info from "@/components/Icons/Info";
 import {
@@ -18,9 +18,20 @@ const data: Data[] = [
   { name: "Gain", value: 700 },
   { name: "Loss", value: 0 },
 ];
+
 const COLORS = ["#277326", "#C10C15"];
 
 export default function Summary() {
+  const [gainRatio, setGainRatio] = useState<string>("0");
+
+  useEffect(() => {
+    const total = data.reduce((sum, item) => sum + item.value, 0);
+    const gainItem = data.find((item) => item.name === "Gain");
+    const gainRatio =
+      gainItem && total > 0 ? (gainItem.value / total) * 100 : 0;
+    setGainRatio(gainRatio.toFixed(2));
+  }, [data]);
+
   return (
     <>
       <div className="mt-[14px] border-2 border-[#C6CDD1] bg-white">
@@ -178,7 +189,7 @@ export default function Summary() {
 
                       <div className="absolute -bottom-[20px] left-[52%] -translate-x-1/2 text-center">
                         <p className="text-[12px]">Gain/Loss Ratio</p>
-                        <h2 className="text-xl font-semibold">100%</h2>
+                        <h2 className="text-xl font-semibold">{gainRatio}%</h2>
                       </div>
                     </div>
                   </div>
