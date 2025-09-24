@@ -16,7 +16,7 @@ interface Data {
 
 const data: Data[] = [
   { name: "Gain", value: 700 },
-  { name: "Loss", value: 300 },
+  { name: "Loss", value: 0 },
 ];
 const COLORS = ["#277326", "#C10C15"];
 
@@ -141,7 +141,7 @@ export default function Summary() {
                           Total Losses
                         </p>
                         <p className="text-base text-right font-medium text-[#C10C15]">
-                          -$3,033.91
+                          -$0.00
                         </p>
                       </div>
                       <div className="grid grid-cols-2 items-center justify-between gap-1">
@@ -176,9 +176,9 @@ export default function Summary() {
                         </Pie>
                       </PieChart>
 
-                      <div className="absolute -bottom-[20px] left-[50%] -translate-x-1/2 text-center">
+                      <div className="absolute -bottom-[20px] left-[52%] -translate-x-1/2 text-center">
                         <p className="text-[12px]">Gain/Loss Ratio</p>
-                        <h2 className="text-xl font-semibold">79.02%</h2>
+                        <h2 className="text-xl font-semibold">100%</h2>
                       </div>
                     </div>
                   </div>
