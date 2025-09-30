@@ -50,27 +50,27 @@ export default function Summary() {
               Transaction Analyzer
             </TabsTrigger>
           </TabsList>
-          <div className="py-[24px] sm:py-[36px] px-[26px] sm:px-[38px]">
+          <div className="py-[24px] sm:py-[36px] px-[26px] sm:px-[18px]">
             <TabsContent value="gain-loss-summary">
-              <div className="grid lg:grid-cols-[28%_32%_40%] gap-y-4 lg:gap-y-0">
+              <div className="grid lg:grid-cols-[26%_34%_40%] gap-y-4 lg:gap-y-0">
                 {/* Reporting Period */}
                 <div className="lg:pr-[15px] xl:pr-[25px] lg:border-r lg:border-[#C6CCD3]">
                   <p className="text-base">Reporting Period</p>
-                  <h2 className="text-xl mb-4">01/01/2025 to 09/17/2025</h2>
+                  <h2 className="text-lg xl:text-xl mb-4">01/01/2025 to 09/17/2025</h2>
 
                   <div className="space-y-3 sm:space-y-0">
                     <div className="flex flex-wrap items-center justify-between gap-1">
-                      <p className="text-base text-secondary-text">
+                      <p className="text-base lg:text-sm xl:text-base text-secondary-text">
                         Total Proceeds
                       </p>
-                      <p className="text-base">$1,000,000</p>
+                      <p className="text-base lg:text-sm xl:text-base">$1,000,000</p>
                     </div>
 
                     <div className="flex items-center justify-between gap-1">
-                      <p className="text-base text-secondary-text">
+                      <p className="text-base lg:text-sm xl:text-base text-secondary-text">
                         Total Cost Basis
                       </p>
-                      <p className="text-base">$1,000,000</p>
+                      <p className="text-base lg:text-sm xl:text-base">$1,000,000</p>
                     </div>
                   </div>
                 </div>
@@ -80,46 +80,46 @@ export default function Summary() {
                   <div className="space-y-3 sm:space-y-0">
                     <h2 className="text-xl font-semibold mb-4">Gain/Loss</h2>
 
-                    <div className="grid grid-cols-3 items-center justify-between gap-1">
-                      <p className="text-base text-secondary-text">Long Term</p>
-                      <p className="text-base font-medium text-[#C10C15] text-center">
+                    <div className="grid grid-cols-3 lg:grid-cols-[40%_30%_30%] items-center justify-between gap-1">
+                      <p className="text-base lg:text-sm xl:text-base text-secondary-text">Long Term</p>
+                      <p className="text-base lg:text-sm xl:text-base font-medium text-[#C10C15] text-center">
                         -$3,033.91
                       </p>
-                      <p className="text-base text-[#C10C15] text-right">
+                      <p className="text-base lg:text-sm xl:text-base text-[#C10C15] text-right">
                         (-4.06%)
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-3 items-center justify-between gap-1">
-                      <p className="text-base  text-secondary-text">
+                    <div className="grid grid-cols-3 lg:grid-cols-[40%_30%_30%] items-center justify-between gap-1">
+                      <p className="text-base lg:text-sm xl:text-base  text-secondary-text">
                         Short Term
                       </p>
-                      <p className="text-base  font-medium text-[#277326] text-center">
-                        -$3,033.91
+                      <p className="text-base lg:text-sm xl:text-base  font-medium text-[#277326] text-center">
+                        +$3,033.91
                       </p>
-                      <p className="text-base  text-[#277326] text-right">
-                        (-4.06%)
-                      </p>
-                    </div>
-
-                    <div className="grid grid-cols-3 items-center justify-between gap-1">
-                      <p className="text-base  text-secondary-text">Net Gain</p>
-                      <p className="text-base  font-medium text-[#277326] text-center">
-                        -$3,033.91
-                      </p>
-                      <p className="text-base  text-[#277326] text-right">
-                        (-4.06%)
+                      <p className="text-base lg:text-sm xl:text-base  text-[#277326] text-right">
+                        (+4.06%)
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-3 items-center justify-between gap-1">
-                      <p className="text-base  text-secondary-text">
+                    <div className="grid grid-cols-3 lg:grid-cols-[40%_30%_30%] items-center justify-between gap-1">
+                      <p className="text-base lg:text-sm xl:text-base  text-secondary-text">Net Gain</p>
+                      <p className="text-base lg:text-sm xl:text-base  font-medium text-[#277326] text-center">
+                        +$3,033.91
+                      </p>
+                      <p className="text-base lg:text-sm xl:text-base  text-[#277326] text-right">
+                        (+4.06%)
+                      </p>
+                    </div>
+
+                    <div className="grid grid-cols-3 lg:grid-cols-[40%_30%_30%] items-center justify-between gap-1">
+                      <p className="text-base lg:text-sm xl:text-base  text-secondary-text">
                         Disallowed Loss
                       </p>
-                      <p className="text-base font-medium text-[#C10C15] text-center">
-                        -$3,033.91
+                      <p className="text-base lg:text-sm xl:text-base font-medium text-center">
+                        $0.00
                       </p>
-                      <p className="text-base  text-[#C10C15] text-right"></p>
+                      <p className="text-base lg:text-sm xl:text-base  text-[#C10C15] text-right"></p>
                     </div>
                   </div>
                 </div>
@@ -140,27 +140,27 @@ export default function Summary() {
                         </Tooltip>
                       </h2>
                       <div className="grid grid-cols-2 items-center justify-between gap-1">
-                        <p className="text-base  text-secondary-text">
+                        <p className="text-base lg:text-sm xl:text-base  text-secondary-text">
                           Total Gains
                         </p>
-                        <p className="text-base text-right font-medium text-[#277326]">
-                          -$3,033.91
+                        <p className="text-base lg:text-sm xl:text-base text-right font-medium text-[#277326]">
+                          +$3,033.91
                         </p>
                       </div>
                       <div className="grid grid-cols-2 items-center justify-between gap-1">
-                        <p className="text-base  text-secondary-text">
+                        <p className="text-base lg:text-sm xl:text-base  text-secondary-text">
                           Total Losses
                         </p>
-                        <p className="text-base text-right font-medium text-[#C10C15]">
-                          -$0.00
+                        <p className="text-base lg:text-sm xl:text-base text-right font-medium">
+                          $0.00
                         </p>
                       </div>
                       <div className="grid grid-cols-2 items-center justify-between gap-1">
-                        <p className="text-base  text-secondary-text">
+                        <p className="text-base lg:text-sm xl:text-base  text-secondary-text">
                           Net Gain
                         </p>
-                        <p className="text-base text-right font-medium text-[#277326]">
-                          -$3,033.91
+                        <p className="text-base lg:text-sm xl:text-base text-right font-medium text-[#277326]">
+                          +$3,033.91
                         </p>
                       </div>
                     </div>
