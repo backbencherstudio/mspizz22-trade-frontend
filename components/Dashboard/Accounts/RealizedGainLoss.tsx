@@ -247,40 +247,40 @@ export default function RealizedGainLoss() {
               <TableHead className="whitespace-pre-wrap md:sticky md:left-0 md:bg-white">
                 <span className="text-link">Symbol Description</span>
               </TableHead>
-              <TableHead>
+              <TableHead className="text-end">
                 <span className="text-link">Closed Date</span>
               </TableHead>
-              <TableHead>
+              <TableHead className="text-end">
                 <span className="text-link">Quantity</span>
               </TableHead>
-              <TableHead>
+              <TableHead className="text-end">
                 <span className="text-secondary-text">Closing Price</span>
               </TableHead>
-              <TableHead>
+              <TableHead className="text-end">
                 <span className="text-secondary-text">Cost Basis Method</span>
               </TableHead>
-              <TableHead>
+              <TableHead className="text-end">
                 <span className="text-link">Proceeds</span>
               </TableHead>
-              <TableHead>
+              <TableHead className="text-end">
                 <span className="text-link">Cost Basis (CB)</span>
                 <p>
                   <i className="text-secondary-text">Transaction CB</i>
                 </p>
               </TableHead>
-              <TableHead>
+              <TableHead className="text-end">
                 <span className="text-link">Total</span>
                 <p>
                   <i className="text-secondary-text">Transaction Total $</i>
                 </p>
               </TableHead>
-              <TableHead>
+              <TableHead className="text-end">
                 <span className="text-link">Long Term</span>
                 <p>
                   <i className="text-secondary-text">Transaction LT $</i>
                 </p>
               </TableHead>
-              <TableHead>
+              <TableHead className="text-end">
                 <span className="text-link">Short Term</span>
                 <p>
                   <i className="text-secondary-text">Transaction ST $</i>
@@ -300,22 +300,22 @@ export default function RealizedGainLoss() {
                   </p>
                   <p>{row.symbol.bank}</p>
                 </TableCell>
-                <TableCell className="whitespace-pre-wrap align-top">
+                <TableCell className="whitespace-pre-wrap align-top text-end">
                   {row.date}
                 </TableCell>
-                <TableCell className="whitespace-pre-wrap align-top">
+                <TableCell className="whitespace-pre-wrap align-top text-end">
                   {row.qty}
                 </TableCell>
-                <TableCell className="whitespace-pre-wrap align-top">
+                <TableCell className="whitespace-pre-wrap align-top text-end">
                   {row.closingPrice}
                 </TableCell>
-                <TableCell className="whitespace-pre-wrap align-top">
+                <TableCell className="whitespace-pre-wrap align-top text-end">
                   {row.costBasisMethod}
                 </TableCell>
-                <TableCell className="whitespace-pre-wrap align-top">
+                <TableCell className="whitespace-pre-wrap align-top text-end">
                   {row.proceeds}
                 </TableCell>
-                <TableCell className="whitespace-pre-wrap align-top">
+                <TableCell className="whitespace-pre-wrap align-top text-end">
                   {row.costBasisCB.positive &&
                     row.costBasisCB.positive.map((item, i) => (
                       <p className="text-link" key={i}>
@@ -329,7 +329,7 @@ export default function RealizedGainLoss() {
                       </p>
                     ))}
                 </TableCell>
-                <TableCell className="whitespace-pre-wrap align-top">
+                <TableCell className="whitespace-pre-wrap align-top text-end">
                   {row.transactionTotal.positive &&
                     row.transactionTotal.positive.map((item, i) => (
                       <p className="text-positive" key={i}>
@@ -349,7 +349,7 @@ export default function RealizedGainLoss() {
                       </p>
                     ))}
                 </TableCell>
-                <TableCell className="whitespace-pre-wrap align-top">
+                <TableCell className="whitespace-pre-wrap align-top text-end">
                   {row.transactionLT.positive &&
                     row.transactionLT.positive.map((item, i) => (
                       <p className="text-positive" key={i}>
@@ -368,7 +368,7 @@ export default function RealizedGainLoss() {
                       </p>
                     ))}
                 </TableCell>
-                <TableCell className="whitespace-pre-wrap align-top">
+                <TableCell className="whitespace-pre-wrap align-top text-end">
                   {row.transactionST.positive &&
                     row.transactionST.positive.map((item, i) => (
                       <p className="text-positive" key={i}>
