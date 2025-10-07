@@ -56,21 +56,27 @@ export default function Summary() {
                 {/* Reporting Period */}
                 <div className="lg:pr-[15px] xl:pr-[25px] lg:border-r lg:border-[#C6CCD3]">
                   <p className="text-base">Reporting Period</p>
-                  <h2 className="text-lg xl:text-xl mb-4">01/01/2025 to 09/17/2025</h2>
+                  <h2 className="text-lg xl:text-xl mb-4">
+                    01/01/2025 to 09/17/2025
+                  </h2>
 
                   <div className="space-y-3 sm:space-y-0">
                     <div className="flex flex-wrap items-center justify-between gap-1">
                       <p className="text-base lg:text-sm xl:text-base text-secondary-text">
                         Total Proceeds
                       </p>
-                      <p className="text-base lg:text-sm xl:text-base">$1,000,000</p>
+                      <p className="text-base lg:text-sm xl:text-base">
+                        $1,000,000
+                      </p>
                     </div>
 
                     <div className="flex items-center justify-between gap-1">
                       <p className="text-base lg:text-sm xl:text-base text-secondary-text">
                         Total Cost Basis
                       </p>
-                      <p className="text-base lg:text-sm xl:text-base">$1,000,000</p>
+                      <p className="text-base lg:text-sm xl:text-base">
+                        $1,000,000
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -81,7 +87,9 @@ export default function Summary() {
                     <h2 className="text-xl font-semibold mb-4">Gain/Loss</h2>
 
                     <div className="grid grid-cols-3 lg:grid-cols-[40%_30%_30%] items-center justify-between gap-1">
-                      <p className="text-base lg:text-sm xl:text-base text-secondary-text">Long Term</p>
+                      <p className="text-base lg:text-sm xl:text-base text-secondary-text">
+                        Long Term
+                      </p>
                       <p className="text-base lg:text-sm xl:text-base font-medium text-[#C10C15] text-center">
                         -$3,033.91
                       </p>
@@ -103,7 +111,9 @@ export default function Summary() {
                     </div>
 
                     <div className="grid grid-cols-3 lg:grid-cols-[40%_30%_30%] items-center justify-between gap-1">
-                      <p className="text-base lg:text-sm xl:text-base  text-secondary-text">Net Gain</p>
+                      <p className="text-base lg:text-sm xl:text-base  text-secondary-text">
+                        Net Gain
+                      </p>
                       <p className="text-base lg:text-sm xl:text-base  font-medium text-[#277326] text-center">
                         +$3,033.91
                       </p>

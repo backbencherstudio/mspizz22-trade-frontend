@@ -3,6 +3,7 @@ import TransactionFilter from "@/components/Dashboard/Accounts/TransactionFilter
 import Summary from "@/components/Dashboard/Accounts/Summary";
 import DetailsCard from "@/components/Dashboard/Accounts/DetailsCard";
 import FixedTrade from "./FixedTrade";
+import RealizedGainLoss from "./RealizedGainLoss";
 
 export default function Accounts() {
   return (
@@ -12,9 +13,10 @@ export default function Accounts() {
         <TransactionFilter />
         <Summary />
         <DetailsCard />
+        <RealizedGainLoss />
       </div>
 
-      <FixedTrade/>
+      <FixedTrade />
     </div>
   );
 }
