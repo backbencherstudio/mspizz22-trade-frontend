@@ -70,12 +70,16 @@ export default function Header() {
       <div className="flex justify-between items-center flex-wrap gap-y-2 sm:gap-x-4 gap-x-2 pt-6 sm:pt-8">
         <Select>
           <SelectTrigger
-            className="max-w-[350px] w-full text-base font-semibold bg-link rounded-[6px] shadow-none outline-none focus-visible:ring-0 focus-visible:ring-offset-0 cursor-pointer [&_span]:text-white [&_svg]:!text-white"
+            className="max-w-[350px] w-full text-base font-semibold bg-link rounded-[6px] shadow-none outline-none focus-visible:ring-0 focus-visible:ring-offset-0 cursor-pointer [&_span]:text-white [&_svg]:!text-white grid grid-cols-[90%_10%]"
             style={{ height: "50px" }}
           >
             <SelectValue
-              className="text-white"
-              placeholder="All Brokerage Accounts"
+              placeholder={
+                <div className="flex justify-between w-full">
+                  <span>Limit Liability Comp...</span>
+                  <span>...339</span>
+                </div>
+              }
             />
           </SelectTrigger>
           <SelectContent className="rounded-none">
